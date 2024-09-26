@@ -61,22 +61,6 @@
     color: #ff5733;
   }
 
-  .menu-toggle {
-    display: flex;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #333;
-    width: 150px;
-    padding: 10px;
-    border-radius: 5px;
-  }
-
   .menu.active {
     display: flex;
   }
@@ -261,6 +245,7 @@
     color: rgb(30, 48, 80);
   }
 
+  
   .card-languages i {
     font-size: 30px;
     color: rgb(127, 140, 250);
