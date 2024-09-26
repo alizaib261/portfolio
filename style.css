@@ -10,58 +10,56 @@
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
+  /* Style the navigation bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Equal space between the elements */
+    align-items: center;
+    background-color: white;
+    padding: 10px 30px;
+  }
 
-/* Style the navigation bar */
-.navbar {
-  display: flex;
-  justify-content: space-between; /* Equal space between the elements */
-  align-items: center;
-  background-color: white;
-  padding: 10px 30px;
-}
+  /* Style the company name */
+  .company-name {
+    color: rgb(127, 140, 250);
+    font-size: 20px;
+    font-weight: 900;
+  }
 
-/* Style the company name */
-.company-name {
-  color: rgb(127, 140, 250);
-  font-size: 20px;
-  font-weight: 900;
-}
+  /* Style the hamburger menu */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
 
-/* Style the hamburger menu */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
+  .bar {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(96, 122, 255);
+    margin: 3px 0;
+  }
 
-.bar {
-  width: 30px;
-  height: 3px;
-  background-color: rgb(96, 122, 255);
-  margin: 3px 0;
-}
+  /* Style the navigation menu */
+  .menu {
+    list-style: none;
+    display: flex;
+  }
 
-/* Style the navigation menu */
-.menu {
-  list-style: none;
-  display: flex;
-}
+  .menu li {
+    margin-right: 20px;
+  }
 
-.menu li {
-  margin-right: 20px;
-}
+  .menu a {
+    text-decoration: none;
+    color: rgb(96, 122, 255);
+    font-weight: bold;
+    transition: color 0.3s;
+  }
 
-.menu a {
-  text-decoration: none;
-  color: rgb(96, 122, 255);
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.menu a:hover {
-  color: #ff5733;
-}
-
+  .menu a:hover {
+    color: #ff5733;
+  }
 
   .menu-toggle {
     display: flex;
