@@ -230,6 +230,7 @@
     justify-content: center;
     align-items: center;
   }
+  
   .card1 {
     display: flex;
     background-color: white;
@@ -245,7 +246,6 @@
     color: rgb(30, 48, 80);
   }
 
-  
   .card-languages i {
     font-size: 30px;
     color: rgb(127, 140, 250);
