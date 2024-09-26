@@ -9,7 +9,7 @@
 }
 
 /* Media query for mobile devices */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1025px) {
   /* Style the navigation bar */
   .navbar {
     display: flex;
