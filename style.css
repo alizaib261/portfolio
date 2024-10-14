@@ -1,3 +1,4 @@
+/* Base Styles */
 @import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
 
 /* Reset some default styles */
@@ -100,21 +101,19 @@
 
 .font-awesome {
   display: flex;
-  margin-right: 250px;
   margin-top: 10px;
   justify-content: space-between;
-  cursor: pointer;
   color: rgb(23, 43, 77);
-}  /* Style the contact form container */
+}
+
+/* Style the contact form container */
 .contact-form-container {
   background-color: #6070ff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
   text-align: center;
-  margin: 20px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 20px 10%;
 }
 
 .contact-form-container h2 {
@@ -166,4 +165,88 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: rgb(216, 219, 248);
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .intro h1 {
+    font-size: 32px;
+  }
+
+  .intro-container {
+    padding: 20px;
+    height: auto;
+  }
+
+  .font-awesome {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .font-awesome i {
+    margin: 10px;
+  }
+
+  .contact-form-container {
+    margin: 20px 5%;
+    padding: 15px;
+  }
+
+  .contact-form-container h2 {
+    font-size: 20px;
+  }
+
+  .input-group input[type="text"],
+  .input-group input[type="email"],
+  .input-group textarea {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+/* Smaller screen sizes like phones */
+@media only screen and (max-width: 480px) {
+  .intro h1 {
+    font-size: 28px;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .contact-form-container {
+    margin: 15px 2%;
+    padding: 10px;
+  }
+
+  .contact-form-container h2 {
+    font-size: 18px;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .font-awesome {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .intro p {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 12px;
+  }
 }
