@@ -1,7 +1,6 @@
 /* Base Styles */
 @import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
 
-/* Reset some default styles */
 * {
   margin: 0;
   padding: 0;
@@ -12,20 +11,19 @@
 /* Style the navigation bar */
 .navbar {
   display: flex;
-  justify-content: space-between; /* Equal space between the elements */
+  justify-content: space-between;
   align-items: center;
   background-color: white;
   padding: 10px 30px;
 }
 
-/* Style the company name */
 .company-name {
   color: rgb(127, 140, 250);
   font-size: 20px;
   font-weight: 900;
 }
 
-/* Style the hamburger menu */
+/* Hamburger menu */
 .menu-toggle {
   display: flex;
   flex-direction: column;
@@ -39,47 +37,70 @@
   margin: 3px 0;
 }
 
-/* Style the navigation menu */
-.menu {
-  list-style: none;
+/* Fullscreen Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.8); /* Blue background */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+.overlay.active {
   display: flex;
 }
 
-.menu li {
-  margin-right: 20px;
+/* Close button for overlay */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
 }
 
-.menu a {
+/* Overlay menu styles */
+.overlay-menu {
+  list-style: none;
+  text-align: right;
+  width: 60%;
+}
+
+.overlay-menu li {
+  margin: 20px 0;
+}
+
+.overlay-menu a {
+  font-size: 30px;
+  color: white;
   text-decoration: none;
-  color: rgb(96, 122, 255);
   font-weight: bold;
   transition: color 0.3s;
 }
 
-.menu a:hover {
+.overlay-menu a:hover {
   color: #ff5733;
 }
 
-.menu.active {
-  display: flex;
-}
-
-/* Style the intro container */
+/* Intro Section */
 .intro-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100vh; /* Full viewport height */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-/* Style the intro section */
 .intro {
   text-align: justify;
   padding: 20px;
-  margin-left: 20px; /* Space from the left */
-  margin-right: 20px; /* Space from the right */
-  margin-top: 20px; /* Space from the top */
-  margin-bottom: 20px; /* Space from the bottom */
+  margin: 20px;
 }
 
 .intro h1 {
@@ -94,7 +115,6 @@
 }
 
 .intro h4 {
-  display: flex;
   padding-top: 20px;
   color: rgb(127, 140, 250);
 }
@@ -106,7 +126,7 @@
   color: rgb(23, 43, 77);
 }
 
-/* Style the contact form container */
+/* Contact Form */
 .contact-form-container {
   background-color: #6070ff;
   border-radius: 10px;
@@ -126,20 +146,12 @@
   margin-bottom: 20px;
 }
 
-/* Style the form elements */
 .input-group {
   text-align: left;
   margin-bottom: 15px;
 }
 
-.input-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.input-group input[type="text"],
-.input-group input[type="email"],
+.input-group input,
 .input-group textarea {
   width: 100%;
   padding: 10px;
@@ -148,11 +160,6 @@
   font-size: 16px;
 }
 
-.input-group textarea {
-  resize: vertical;
-}
-
-/* Style the submit button */
 button[type="submit"] {
   background-color: white;
   color: rgb(127, 140, 250);
@@ -160,7 +167,6 @@ button[type="submit"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
 }
 
 button[type="submit"]:hover {
@@ -177,11 +183,6 @@ button[type="submit"]:hover {
     font-size: 32px;
   }
 
-  .intro-container {
-    padding: 20px;
-    height: auto;
-  }
-
   .font-awesome {
     flex-wrap: wrap;
     justify-content: center;
@@ -196,12 +197,7 @@ button[type="submit"]:hover {
     padding: 15px;
   }
 
-  .contact-form-container h2 {
-    font-size: 20px;
-  }
-
-  .input-group input[type="text"],
-  .input-group input[type="email"],
+  .input-group input,
   .input-group textarea {
     padding: 8px;
     font-size: 14px;
@@ -213,7 +209,6 @@ button[type="submit"]:hover {
   }
 }
 
-/* Smaller screen sizes like phones */
 @media only screen and (max-width: 480px) {
   .intro h1 {
     font-size: 28px;
@@ -224,29 +219,4 @@ button[type="submit"]:hover {
   }
 
   .contact-form-container {
-    margin: 15px 2%;
-    padding: 10px;
-  }
-
-  .contact-form-container h2 {
-    font-size: 18px;
-  }
-
-  .intro-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .font-awesome {
-    justify-content: center;
-    margin-left: 0;
-  }
-
-  .intro p {
-    font-size: 14px;
-  }
-
-  button[type="submit"] {
-    font-size: 12px;
-  }
-}
+    margin: 15px 2
