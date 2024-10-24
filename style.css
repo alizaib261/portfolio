@@ -219,4 +219,7 @@ button[type="submit"]:hover {
   }
 
   .contact-form-container {
-    margin: 15px 2
+    margin: 15px 2%;
+    padding: 15px;
+  }
+}
